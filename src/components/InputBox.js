@@ -1,4 +1,4 @@
-import { createTodo } from "@/lib/actions/createTodo";
+import { createTodo } from "@/lib/actions/todoActions";
 import React from "react";
 import { useState } from "react";
 
@@ -16,7 +16,7 @@ const InputBox = ({ setTodo }) => {
         className="border-2 border-gray-400 px-2 py-1 flex-1 bg-transparent placeholder:text-sm placeholder:text-gray-400 rounded-lg focus:outline-0"
       />
       <button
-        onClick={()=>createTodo()}
+        onClick={()=>createTodo(inputValue)}
         className="border rounded-4xl px-2 py-1 bg-green-700 cursor-pointer hover:transition-all duration-100 ease-in-out delay-200 hover:bg-sky-500 text-white"
       >
         Add todo

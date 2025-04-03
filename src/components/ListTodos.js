@@ -1,7 +1,8 @@
 import { Trash2 } from "lucide-react";
 import React from "react";
 
-const ListTodos = ({ todos }) => {
+const ListTodos = async({ todos }) => {
+const todo = await alltodos();
   return (
     <div className="flex gap-2 flex-col   p-2">
       {todos !== "" && (

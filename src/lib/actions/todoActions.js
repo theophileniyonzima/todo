@@ -1,14 +1,14 @@
 'use server'
 
-import connectDB from "../database";
+import { connectDB } from "../database";
 import todoModel from "../models/todoModel";
 
- export async function createTodo() {
+ export async function createTodo(inputValue) {
     try {
        await connectDB();
 
-       const todo = await todoModel.insert({
-        title:'today finnish this work',
+       const todo = await todoModel.create({
+        title:inputValue,
         complete:false
        })
 
@@ -19,4 +19,6 @@ import todoModel from "../models/todoModel";
         console.log(error);
         
     }
+ }
+ export async function alltodos() {
  }
